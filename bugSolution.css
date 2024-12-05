@@ -1,0 +1,33 @@
+The following CSS code provides a solution using clearfix:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Parent container should include clearfix class*/
+.parent {
+  width: 100%;
+  overflow: hidden;
+}
+```
+
+Alternatively, you can use Flexbox for a more modern and flexible approach:
+
+```css
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  width: 50%;
+}
+```
